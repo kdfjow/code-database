@@ -1,0 +1,39 @@
+1.iloc:
+dataset = pd.read_csv(Data.csv)
+# X 获取所有行从第0列到倒数第1列的数据（从0起算）
+X = dataset.iloc[ : ,:-1].values
+# Y 获取所有行第3列的数据
+Y = dataset.iloc[ : , 3].values
+iloc 的作用是通过行列号来获取数据，而 loc 则是通过标签索引数据
+
+2.Imputer:
+填补缺失值：sklearn.preprocessing.Imputer(missing_values=’NaN’, strategy=’mean’, axis=0, verbose=0, copy=True)
+
+主要参数说明：
+
+missing_values：缺失值，可以为整数或NaN(缺失值numpy.nan用字符串‘NaN’表示)，默认为NaN
+
+strategy：替换策略，字符串，默认用均值‘mean’替换
+
+①若为mean时，用特征列的均值替换
+
+②若为median时，用特征列的中位数替换
+
+③若为most_frequent时，用特征列的众数替换
+
+axis：指定轴数，默认axis=0代表列，axis=1代表行
+
+copy：设置为True代表不在原数据集上修改，设置为False时，就地修改，存在如下情况时，即使设置为False时，也不会就地修改
+
+①X不是浮点值数组
+
+②X是稀疏且missing_values=0
+
+③axis=0且X为CRS矩阵
+
+④axis=1且X为CSC矩阵
+
+3.KNN(KNeighborsClassifier)k近邻算法
+K最近邻(k-Nearest Neighbor，KNN)分类算法的核心思想是如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。
+
+4.
