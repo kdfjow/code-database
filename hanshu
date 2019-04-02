@@ -48,10 +48,21 @@ index和columns 行索引和列索引  格式['x1','x2']
 dtype:每列的类型
 
 copy: 查了api，才知道意思是从input输入中拷贝数据。默认是false，不拷贝
+
 5.\r   \n   \r\n
 \r:回到本行行首
 \n:换行
 \r\n：Enter
 
+6.pd.read_csv()参数
+filepath_or_buffer：读取的对象，是一个字符串，该字符串可以是URL，包括http，ftp，本地文件
+sep：分隔符，默认是‘,’，CSV文件的分隔符
+delimiter：sep的替代参数，默认为None
+header：列名，int或int列表，默认是infer，即默认第一行为列名
+names：要使用的列名(columns)，array-like，默认是None，当读取的CSV文件没有列名时，可以通过names参数指定
+index_col：要是用的行名(index)，int或sequence或False，默认为None，即默认添加从0开始的index
 
-④axis=1且X为CSC矩阵
+7.pandas的reset_index()
+This is useful when the index needs to be treated as a column, or when the index is meaningless and needs to be reset to the default before another operation.
+当索引需要作为列处理时，或者当索引没有意义并且需要在另一个操作之前重置为默认值时，这是非常有用的。
+
