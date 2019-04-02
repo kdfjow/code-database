@@ -66,3 +66,17 @@ index_col：要是用的行名(index)，int或sequence或False，默认为None�
 This is useful when the index needs to be treated as a column, or when the index is meaningless and needs to be reset to the default before another operation.
 当索引需要作为列处理时，或者当索引没有意义并且需要在另一个操作之前重置为默认值时，这是非常有用的。
 
+8.scipy.misc作用
+SciPy 中包含一些用于输入和输出的实用模块。下面介绍其中两个模块：io 和misc。
+以图像形式保存数组
+因为我们需要对图像进行操作，并且需要使用数组对象来做运算，所以将数组直接保存为图像文件1 非常有用。
+
+9.from scipy.misc import imread
+imread()以数组的形式读取图片
+
+10.image_colors = ImageColorGenerator(alice_coloring)
+以背景图片作为颜色填充
+
+11.plt.axis("off")
+off:表示关闭轴线和标签
+
