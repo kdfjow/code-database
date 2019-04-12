@@ -80,3 +80,18 @@ imread()以数组的形式读取图片
 11.plt.axis("off")
 off:表示关闭轴线和标签
 
+12.jieba.posseg.cut(text)
+jieba.posseg.cut(sen):返回的每个迭代对象有两个属性-> word 词语 + flag 词性
+
+example:
+import jieba.posseg
+words = jieba.posseg.cut(sen)
+for word in words:
+    print(word.flag," ",word.word)
+    
+  
+   
+result:
+ns   胶州市
+n   市长
+x   江大桥
