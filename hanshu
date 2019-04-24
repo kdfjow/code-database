@@ -231,3 +231,36 @@ pre_dispatch：控制并行执行期间调度的作业数量。减少这个数�
 没有，在这种情况下，所有的工作立即创建并产生。将其用于轻量级和快速运行的作业，以避免由于按需产生作业而导致延迟
 一个int，给出所产生的总工作的确切数量
 一个字符串，给出一个表达式作为n_jobs的函数，如'2 * n_jobs'
+
+15.os.path.join()
+用os.path.join()连接两个文件名地址的时候，就比os.path.join("D:\","test.txt")结果是D:\test.txt，并且在我们往里面写东西，然后保存，在这个目录下会生成这个文件，但是如果你不写东西，那么执行这句话之后，在D盘的目录下是不会有这个文件名称的
+
+16.torch.save()
+1. 先建立一个字典，保存三个参数：
+
+state = {‘net':model.state_dict(), 'optimizer':optimizer.state_dict(), 'epoch':epoch}
+
+2.调用torch.save():
+
+torch.save(state, dir)
+state = {‘net':model.state_dict(), 'optimizer':optimizer.state_dict(), 'epoch':epoch}
+其中dir表示保存文件的绝对路径+保存文件名，如'/home/qinying/Desktop/modelpara.pth'
+
+
+16.format()
+print('she is  {}'.format('lily'))
+result: she is  lily
+
+17.items()
+Python 字典(Dictionary) items() 函数以列表返回可遍历的(键, 值) 元组数组。
+example:
+dict = {'Google': 'www.google.com', 'Runoob': 'www.runoob.com', 'taobao': 'www.taobao.com'}
+print(dict.items())
+for key,value in dict.items():
+    print(key+'----------'+ value)
+    
+result:
+dict_items([('Google', 'www.google.com'), ('Runoob', 'www.runoob.com'), ('taobao', 'www.taobao.com')])
+Google----------www.google.com
+Runoob----------www.runoob.com
+taobao----------www.taobao.com
