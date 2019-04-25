@@ -264,3 +264,41 @@ dict_items([('Google', 'www.google.com'), ('Runoob', 'www.runoob.com'), ('taobao
 Google----------www.google.com
 Runoob----------www.runoob.com
 taobao----------www.taobao.com
+
+18.add_argument（）
+参数解析：https://wenku.baidu.com/view/48cce7e8bcd126fff6050b08.html
+
+19.parser.parse_args()
+我对与文档的理解是，parse_args()是将之前add_argument()定义的参数进行赋值，并返回相关的namespace
+
+20.__dict__
+　首先看一下类的__dict__属性和类对象的__dict__属性
+  类的静态函数、类函数、普通函数、全局变量以及一些内置的属性都是放在类__dict__里的
+  对象的__dict__中存储了一些self.xxx的一些东西
+  https://www.cnblogs.com/alvin2010/p/9102344.html
+  
+ 
+ 21.nn.Embedding()
+ word embedding的定义nn.Embedding(2, 5)，这里的2表示有2个词，5表示5维度，其实也就是一个2x5的矩阵，所以如果你有1000个词，每个词希望是100维，你就可以这样建立一个word embedding，nn.Embedding(1000, 100)。
+ 
+ 22.nn.Linear()
+ class torch.nn.Linear(in_features, out_features, bias=True)
+对输入数据做线性变换：y=Ax+b
+
+参数：
+
+in_features - 每个输入样本的大小
+out_features - 每个输出样本的大小
+bias - 若设置为False，这层不会学习偏置。默认值：True
+
+23.nn.LSTM()
+参数说明:
+
+input_size – 输入的特征维度
+hidden_size – 隐状态的特征维度
+num_layers – 层数（和时序展开要区分开）
+bias – 如果为False，那么LSTM将不会使用$b_{ih},b_{hh}$，默认为True。
+batch_first – 如果为True，那么输入和输出Tensor的形状为(batch, seq, feature)
+dropout – 如果非零的话，将会在RNN的输出上加个dropout，最后一层除外。
+bidirectional – 如果为True，将会变成一个双向RNN，默认为False。
+ 
