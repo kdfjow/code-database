@@ -302,3 +302,13 @@ batch_first – 如果为True，那么输入和输出Tensor的形状为(batch, s
 dropout – 如果非零的话，将会在RNN的输出上加个dropout，最后一层除外。
 bidirectional – 如果为True，将会变成一个双向RNN，默认为False。
  
+24.squeeze()
+squeeze(input，axis) 这里input 是个张量,如果axis维度是一，将此维度压缩。
+张量.squeeze(0) 0表示第一维度，1表示第二维度。  若果值为1，压缩。否则不压缩
+https://blog.csdn.net/lanse_zhicheng/article/details/79148678
+
+
+25.
+
+
+
