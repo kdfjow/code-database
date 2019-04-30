@@ -308,7 +308,20 @@ squeeze(input，axis) 这里input 是个张量,如果axis维度是一，将此�
 https://blog.csdn.net/lanse_zhicheng/article/details/79148678
 
 
-25.
+25.Unicode
+Unicode（统一码、万国码、单一码）是计算机科学领域里的一项业界标准，包括字符集、编码方案等。Unicode 是为了解决传统的字符编码方案的局限而产生的，
+它为每种语言中的每个字符设定了统一并且唯一的二进制编码，以满足跨语言、跨平台进行文本转换、处理的要求。1990年开始研发，1994年正式公布.
+
+26.unicodedata.category(unichr)
+返回一个字符串, 描述unichr的一般类别。
+
+27.unicodedata.normalize()
+normalize() 第一个参数指定字符串标准化的方式。 NFC表示字符应该是整体组成(比如可能的话就使用单一编码)，而NFD表示字符应该分解为多个组合字符表示
+ t1 = unicodedata.normalize('NFC', s1)
+ 以 NFC的方式标准化s1
+ 
+28.python基础
+https://docs.python.org/3.6/tutorial/datastructures.html#dictionaries
 
 
 
