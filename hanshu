@@ -340,4 +340,21 @@ eg:
 >>> map(lambda x, y: x + y, [1, 3, 5, 7, 9], [2, 4, 6, 8, 10])
 [3, 7, 11, 15, 19]
 
+30.torch.max()
+torch.max(input, dim, keepdim=False, out=None) -> (Tensor, LongTensor)
+
+按维度dim 返回最大值
+
+torch.max)(a,0) 返回每一列中最大值的那个元素，且返回索引（返回最大元素在这一列的行索引）
+torch.max(a,1) 返回每一行中最大值的那个元素，且返回其索引（返回最大元素在这一行的列索引）
+
+torch.max()[0]， 只返回最大值的每个数
+
+troch.max()[1]， 只返回最大值的每个索引
+
+torch.max()[1].data 只返回variable中的数据部分（去掉Variable containing:）
+
+torch.max()[1].data.numpy() 把数据转化成numpy ndarry
+
+torch.max()[1].data.numpy().squeeze() 把数据条目中维度为1 的删除掉
 
