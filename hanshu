@@ -358,3 +358,8 @@ torch.max()[1].data.numpy() 把数据转化成numpy ndarry
 
 torch.max()[1].data.numpy().squeeze() 把数据条目中维度为1 的删除掉
 
+
+31.defaultdict
+
+defaultdict(list):{[]}
+defaultdict(set):{()}
